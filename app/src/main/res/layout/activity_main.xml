@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.omer.v1.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChatApp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/msgContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Write your message"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/sendMsg"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        android:id="@+id/sendMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:autoText="false"
+        android:text="Send"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="538dp" />
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_height="400dp"
+        android:layout_below="@+id/textView2"
+        android:layout_width="fill_parent">
+    <TextView
+        android:id="@+id/chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:focusableInTouchMode="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:focusable="true"
+        android:text=""
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="8dp" />
+    </ScrollView>
+
+</RelativeLayout>
